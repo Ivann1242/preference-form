@@ -1,0 +1,541 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Smart Building Tool</h1>
+    <table>
+        <tr>
+            <th>Criterion</th>
+            <th>Rating</th>
+            <th>-1</th>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <td>Privacy</td>
+            <td>Defined by user</td>
+            <td>Fair</td>
+            <td>Neutral</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>Delay</td>
+            <td>Defined by user</td>
+            <td>Fair</td>
+            <td>Neutral</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>Occupancy Level</td>
+            <td>Defined by user</td>
+            <td>Fair</td>
+            <td>Neutral</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>Accuracy</td>
+            <td>Defined by user</td>
+            <td>Fair</td>
+            <td>Neutral</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>Accuracy Group Detection</td>
+            <td>Defined by user</td>
+            <td>Fair</td>
+            <td>Neutral</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>Accuracy High Activity</td>
+            <td>Defined by user</td>
+            <td>Fair</td>
+            <td>Neutral</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>Accuracy Low Activity</td>
+            <td>Defined by user</td>
+            <td>Fair</td>
+            <td>Neutral</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>Spatial Resolution</td>
+            <td>Defined by user</td>
+            <td>Floor/Building</td>
+            <td>Room-Level</td>
+            <td>Workstation/Zone</td>
+        </tr>
+        <tr>
+            <td>Internal Data Reliant</td>
+            <td>Defined by user</td>
+            <td>Entirely Internal</td>
+            <td>Both</td>
+            <td>Entirely External</td>
+        </tr>
+        <tr>
+            <td>External Data Reliant</td>
+            <td>Defined by user</td>
+            <td>Entirely Internal</td>
+            <td>Both</td>
+            <td>Entirely External</td>
+        </tr>
+        <tr>
+            <td>Energy Source</td>
+            <td>Defined by user</td>
+            <td>AC Powered</td>
+            <td>Battery Powered</td>
+            <td>Solar Powered</td>
+        </tr>
+        <tr>
+            <td>Energy Consumption</td>
+            <td>Defined by user</td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>Low</td>
+        </tr>
+        <tr>
+            <td>Maintenance</td>
+            <td>Defined by user</td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>Low</td>
+        </tr>
+        <tr>
+            <td>Research Category</td>
+            <td>Defined by user</td>
+            <td>Paper</td>
+            <td>Pilot</td>
+            <td>Patent</td>
+        </tr>
+        <tr>
+            <td>Sensor Cost</td>
+            <td>Defined by user</td>
+            <td>>$100</td>
+            <td>$50-$100</td>
+            <td><$50</td>
+        </tr>
+        <tr>
+            <td>Installation Cost</td>
+            <td>Defined by user</td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>Low</td>
+        </tr>
+        <tr>
+            <td>Computing Cost</td>
+            <td>Defined by user</td>
+            <td>PC</td>
+            <td>Raspberry Pi</td>
+            <td>Microcontroller</td>
+        </tr>
+        <tr>
+            <td>Scalability</td>
+            <td>Defined by user</td>
+            <td>Low</td>
+            <td>Moderate</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Robustness</td>
+            <td>Defined by user</td>
+            <td>Low</td>
+            <td>Moderate</td>
+            <td>High</td>
+        </tr>
+    </table>
+
+    <h2>Step 2: Enter Your Preferences</h2>
+    <form id="preferencesForm">
+        <label for="privacy">Privacy:</label>
+        <select id="privacy" name="privacy">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="delay">Delay:</label>
+        <select id="delay" name="delay">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <-- 继续添加其他标准 -->
+        <!-- <label for="occupancy_level">Occupancy Level:</label>
+        <select id="occupancy_level" name="occupancy_level">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy">Accuracy:</label>
+        <select id="accuracy" name="accuracy">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy_group_detection">Accuracy Group Detection:</label>
+        <select id="accuracy_group_detection" name="accuracy_group_detection">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy_high_activity">Accuracy High Activity:</label>
+        <select id="accuracy_high_activity" name="accuracy_high_activity">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy_low_activity">Accuracy Low Activity:</label>
+        <select id="accuracy_low_activity" name="accuracy_low_activity">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="spatial_resolution">Spatial Resolution:</label>
+        <select id="spatial_resolution" name="spatial_resolution">
+            <option value="-1">Floor/Building</option>
+            <option value="0">Room-Level</option>
+            <option value="1">Workstation/Zone</option>
+        </select>
+        <br>
+        <label for="internal_data_reliant">Internal Data Reliant:</label>
+        <select id="internal_data_reliant" name="internal_data_reliant">
+            <option value="-1">Entirely Internal</option>
+            <option value="0">Both</option>
+            <option value="1">Entirely External</option>
+        </select>
+        <br>
+        <label for="external_data_reliant">External Data Reliant:</label>
+        <select id="external_data_reliant" name="external_data_reliant">
+            <option value="-1">Entirely Internal</option>
+            <option value="0">Both</option>
+            <option value="1">Entirely External</option>
+        </select>
+        <br>
+        <label for="energy_source">Energy Source:</label>
+        <select id="energy_source" name="energy_source">
+            <option value="-1">AC Powered</option>
+            <option value="0">Battery Powered</option>
+            <option value="1">Solar Powered</option>
+        </select>
+        <br>
+        <label for="energy_consumption">Energy Consumption:</label>
+        <select id="energy_consumption" name="energy_consumption">
+            <option value="-1">High</option>
+            <option value="0">Moderate</option>
+            <option value="1">Low</option>
+        </select>
+        <br>
+        <label for="maintenance">Maintenance:</label>
+        <select id="maintenance" name="maintenance">
+            <option value="-1">High</option>
+            <option value="0">Moderate</option>
+            <option value="1">Low</option>
+        </select>
+        <br>
+        <label for="research_category">Research Category:</label>
+        <select id="research_category" name="research_category">
+            <option value="-1">Paper</option>
+            <option value="0">Pilot</option>
+            <option value="1">Patent</option>
+        </select>
+        <br>
+        <label for="sensor_cost">Sensor Cost:</label>
+        <select id="sensor_cost" name="sensor_cost">
+            <option value="-1">>$100</option>
+            <option value="0">$50-$100</option>
+            <option value="1">$50</option>
+        </select>
+        <br>
+        <label for="installation_cost">Installation Cost:</label>
+        <select id="installation_cost" name="installation_cost">
+            <option value="-1">High</option>
+            <option value="0">Moderate</option>
+            <option value="1">Low</option>
+        </select>
+        <br>
+        <label for="computing_cost">Computing Cost:</label>
+        <select id="computing_cost" name="computing_cost">
+            <option value="-1">PC</option>
+            <option value="0">Raspberry Pi</option>
+            <option value="1">Microcontroller</option>
+        </select>
+        <br>
+        <label for="scalability">Scalability:</label>
+        <select id="scalability" name="scalability">
+            <option value="-1">Low</option>
+            <option value="0">Moderate</option>
+            <option value="1">High</option>
+        </select>
+        <br>
+        <label for="robustness">Robustness:</label>
+        <select id="robustness" name="robustness">
+            <option value="-1">Low</option>
+            <option value="0">Moderate</option>
+            <option value="1">High</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" onclick="submitPreferences()">Submit</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        async function fetchMethods() {
+            const response = await fetch('/methods');
+            const methods = await response.json();
+            return methods;
+        }
+
+        async function submitPreferences() {
+            const form = document.getElementById('preferencesForm');
+            const formData = new FormData(form);
+            const weights = {};
+
+            formData.forEach((value, key) => {
+                weights[key] = parseInt(value);
+            });
+
+            const methods = await fetchMethods();
+            calculateWeightedSum(weights, methods);
+        }
+
+        function calculateWeightedSum(weights, methods) {
+            const results = methods.map(method => {
+                let weightedSum = 0;
+                for (let criterion in weights) {
+                    weightedSum += weights[criterion] * method[criterion];
+                }
+                return {
+                    method: method.method_name,
+                    weightedSum: weightedSum
+                };
+            });
+
+            results.sort((a, b) => b.weightedSum - a.weightedSum);
+            displayResults(results);
+        }
+
+        function displayResults(results) {
+            let resultSection = document.getElementById('results');
+            resultSection.innerHTML = "<h2>Top Methods</h2>";
+            results.slice(0, 2).forEach(result => {
+                resultSection.innerHTML += `<p>${result.method}: ${result.weightedSum}</p>`;
+            });
+        }
+    </script>
+</body>
+</html> --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Preference Form</h1>
+    <form id="preferencesForm">
+        <label for="method_name">Method Name:</label>
+        <input type="text" id="method_name" name="method_name" required>
+        <br><br>
+        <label for="privacy">Privacy:</label>
+        <select id="privacy" name="privacy">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="delay">Delay:</label>
+        <select id="delay" name="delay">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <!-- 继续添加其他标准 -->
+        <label for="occupancy_level">Occupancy Level:</label>
+        <select id="occupancy_level" name="occupancy_level">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy">Accuracy:</label>
+        <select id="accuracy" name="accuracy">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy_group_detection">Accuracy Group Detection:</label>
+        <select id="accuracy_group_detection" name="accuracy_group_detection">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy_high_activity">Accuracy High Activity:</label>
+        <select id="accuracy_high_activity" name="accuracy_high_activity">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="accuracy_low_activity">Accuracy Low Activity:</label>
+        <select id="accuracy_low_activity" name="accuracy_low_activity">
+            <option value="-1">Fair</option>
+            <option value="0">Neutral</option>
+            <option value="1">Good</option>
+        </select>
+        <br>
+        <label for="spatial_resolution">Spatial Resolution:</label>
+        <select id="spatial_resolution" name="spatial_resolution">
+            <option value="-1">Floor/Building</option>
+            <option value="0">Room-Level</option>
+            <option value="1">Workstation/Zone</option>
+        </select>
+        <br>
+        <label for="internal_data_reliant">Internal Data Reliant:</label>
+        <select id="internal_data_reliant" name="internal_data_reliant">
+            <option value="-1">Entirely Internal</option>
+            <option value="0">Both</option>
+            <option value="1">Entirely External</option>
+        </select>
+        <br>
+        <label for="external_data_reliant">External Data Reliant:</label>
+        <select id="external_data_reliant" name="external_data_reliant">
+            <option value="-1">Entirely Internal</option>
+            <option value="0">Both</option>
+            <option value="1">Entirely External</option>
+        </select>
+        <br>
+        <label for="energy_source">Energy Source:</label>
+        <select id="energy_source" name="energy_source">
+            <option value="-1">AC Powered</option>
+            <option value="0">Battery Powered</option>
+            <option value="1">Solar Powered</option>
+        </select>
+        <br>
+        <label for="energy_consumption">Energy Consumption:</label>
+        <select id="energy_consumption" name="energy_consumption">
+            <option value="-1">High</option>
+            <option value="0">Moderate</option>
+            <option value="1">Low</option>
+        </select>
+        <br>
+        <label for="maintenance">Maintenance:</label>
+        <select id="maintenance" name="maintenance">
+            <option value="-1">High</option>
+            <option value="0">Moderate</option>
+            <option value="1">Low</option>
+        </select>
+        <br>
+        <label for="research_category">Research Category:</label>
+        <select id="research_category" name="research_category">
+            <option value="-1">Paper</option>
+            <option value="0">Pilot</option>
+            <option value="1">Patent</option>
+        </select>
+        <br>
+        <label for="sensor_cost">Sensor Cost:</label>
+        <select id="sensor_cost" name="sensor_cost">
+            <option value="-1">>$100</option>
+            <option value="0">$50-$100</option>
+            <option value="1">$50</option>
+        </select>
+        <br>
+        <label for="installation_cost">Installation Cost:</label>
+        <select id="installation_cost" name="installation_cost">
+            <option value="-1">High</option>
+            <option value="0">Moderate</option>
+            <option value="1">Low</option>
+        </select>
+        <br>
+        <label for="computing_cost">Computing Cost:</label>
+        <select id="computing_cost" name="computing_cost">
+            <option value="-1">PC</option>
+            <option value="0">Raspberry Pi</option>
+            <option value="1">Microcontroller</option>
+        </select>
+        <br>
+        <label for="scalability">Scalability:</label>
+        <select id="scalability" name="scalability">
+            <option value="-1">Low</option>
+            <option value="0">Moderate</option>
+            <option value="1">High</option>
+        </select>
+        <br>
+        <label for="robustness">Robustness:</label>
+        <select id="robustness" name="robustness">
+            <option value="-1">Low</option>
+            <option value="0">Moderate</option>
+            <option value="1">High</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" onclick="submitPreferences()">Submit</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        async function submitPreferences() {
+            const form = document.getElementById('preferencesForm');
+            const formData = new FormData(form);
+            const data = {};
+
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            const response = await fetch('/methods', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                fetchBestMethods();
+            }
+        }
+
+        async function fetchBestMethods() {
+            const response = await fetch('/best-methods');
+            const methods = await response.json();
+
+            let resultSection = document.getElementById('results');
+            resultSection.innerHTML = "<h2>Top Methods</h2>";
+            methods.forEach(method => {
+                resultSection.innerHTML += `<h3>${method.method}: ${method.weightedSum}</h3>`;
+                resultSection.innerHTML += '<ul>';
+                for (let criterion in method.details) {
+                    if (criterion !== 'id' && criterion !== 'method_name') {
+                        resultSection.innerHTML += `<li>${criterion}: ${method.details[criterion]}</li>`;
+                    }
+                }
+                resultSection.innerHTML += '</ul>';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchBestMethods);
+    </script>
+</body>
+</html>
+
